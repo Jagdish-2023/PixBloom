@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    .margin-start {
+        margin-left: 250px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .margin-start {
+        margin-left: 0px !important;
+    }
+}
+
+.sidebar-bg {
+    background-color: #f0f4f9;
+}
+
+.nav-link-active {
+    background-color: #bfd9ff;
+    border: 1px solid #bfd9ff;
+    border-radius: 1rem;
+}

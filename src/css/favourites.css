@@ -1,0 +1,11 @@
+@media(max-width: 767.9px) {
+    .favourite-poster {
+        width: 50%;
+    }
+}
+
+@media(min-width: 768px) {
+    .favourite-poster {
+        width: 25%;
+    }
+}

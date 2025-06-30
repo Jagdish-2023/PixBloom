@@ -1,0 +1,22 @@
+.top-bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.photo-sidebar-info {
+    width: 350px;
+    top: 0px;
+    right: 0px;
+}
+
+.mr {
+    margin-right: 350px;
+}
+
+.img-fit {
+    object-fit: contain;
+}

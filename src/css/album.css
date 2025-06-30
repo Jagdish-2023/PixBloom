@@ -1,0 +1,29 @@
+input[type="radio"].btn-check:checked+label {
+    background-color: #bfd9ff;
+    color: #001d35;
+    border-color: #bfd9ff;
+}
+
+.btn-sm {
+    --bs-btn-padding-y: 0.35rem !important;
+    --bs-btn-padding-x: 0.9rem !important;
+    --bs-border-radius-sm: 0.55rem !important
+}
+
+@media (min-width: 768px) {
+    .poster-container {
+        max-width: 40% !important;
+    }
+}
+
+.photo-container {
+    position: relative;
+    top: 25%;
+}
+
+.modal-card-img {
+    height: 300px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+}
