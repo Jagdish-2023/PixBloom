@@ -13,7 +13,7 @@ const Profile = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:3000/v2/user/profile",
+          "https://pix-bloom-be.vercel.app/v2/user/profile",
           { withCredentials: true }
         );
 
