@@ -22,7 +22,9 @@ const Favourites = () => {
       dispatch(fetchPhotosAsync());
       return;
     }
+  }, []);
 
+  useEffect(() => {
     const favouritePhotos = photos.filter((photo) => photo.isFavourite);
     setFavouritePhotos(favouritePhotos);
   }, [photos]);
