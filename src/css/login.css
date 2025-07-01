@@ -1,0 +1,10 @@
+.login-btn {
+    height: 45px !important;
+    --bs-btn-border-color: rgb(136, 147, 151) !important;
+}
+
+.login-btn:hover {
+    background-color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    --bs-btn-hover-color: #6c757d !important
+}

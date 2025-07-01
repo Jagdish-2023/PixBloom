@@ -27,7 +27,6 @@ const SelectImagesModal = ({ albumId, addPhotosBtn }) => {
   const handleResetInputs = () => {
     setSelectedPhotos([]);
     if (addPhotosBtn.current) {
-      console.log("Focus get back");
       addPhotosBtn.current.focus();
     }
   };
