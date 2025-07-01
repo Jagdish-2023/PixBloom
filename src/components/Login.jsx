@@ -5,10 +5,11 @@ import "../css/login.css";
 const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [loading, setLoading] = useState(false);
+  const backendUrl = "https://pix-bloom-be.vercel.app/";
 
   const handleGoogleOAuth = () => {
     try {
-      window.location.href = "http://localhost:3000/auth/google";
+      window.location.href = `${backendUrl}/auth/google`;
     } catch (error) {
       console.error(error);
     }
@@ -16,7 +17,7 @@ const Login = () => {
 
   const handleGuestLogin = () => {
     try {
-      window.location.href = "http://localhost:3000/auth/login/guest";
+      window.location.href = `${backendUrl}/auth/login/guest`;
     } catch (error) {
       console.error(error);
     }
@@ -26,7 +27,7 @@ const Login = () => {
     const checkAuthStatus = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:3000/auth/check", {
+        const res = await axios.get(`${backendUrl}/auth/check`, {
           withCredentials: true,
         });
         if (res?.data?.isLoggedIn) {

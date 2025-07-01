@@ -6,7 +6,7 @@ const fetchApi = async (
   dataToUpdate = null,
   headers = null
 ) => {
-  const url = `http://localhost:3000${endPoint}`;
+  const url = `https://pix-bloom-be.vercel.app/${endPoint}`;
 
   try {
     let response;
