@@ -1,4 +1,5 @@
 import axios from "axios";
+export const backendUrl = "http://localhost:3000";
 
 const fetchApi = async (
   method,
@@ -6,7 +7,7 @@ const fetchApi = async (
   dataToUpdate = null,
   headers = null
 ) => {
-  const url = `https://pix-bloom-be.vercel.app${endPoint}`;
+  const url = `${backendUrl}${endPoint}`;
 
   try {
     let response;

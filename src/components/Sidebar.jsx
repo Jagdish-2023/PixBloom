@@ -1,17 +1,22 @@
 import "../css/main.css";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import BrandLogo from "../images/pixbloom.png";
+import { useRef } from "react";
+import LogoutUserModal from "./modals/LogoutUserModal";
 
 const Sidebar = () => {
   const location = useLocation();
   const path = location.pathname;
+  const logoutBtnRef = useRef(null);
+  const handleLogout = () => {};
   return (
     <>
       {/* Mobile Navbar (shows hamburger button) */}
       <nav className="navbar navbar-light bg-light d-md-none">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/photos">
-            KaviosPix
+            PixBloom
           </NavLink>
           <button
             className="navbar-toggler"
@@ -30,7 +35,28 @@ const Sidebar = () => {
         className="d-none d-md-block sidebar-bg position-fixed vh-100 p-3"
         style={{ width: "250px" }}
       >
-        <h5 className="mb-4">PicBloom</h5>
+        <div className="d-flex justify-content-between align-items-center">
+          <NavLink
+            className="ps-1 d-flex align-items-center nav-brand-logo"
+            to="/photos"
+          >
+            <img
+              src={BrandLogo}
+              alt="brand logo"
+              style={{ width: "24px", height: "auto" }}
+            />
+
+            <span className="nav-brand-text">ixBloom</span>
+          </NavLink>
+          <button
+            className="btn p-0 m-0"
+            data-bs-toggle="modal"
+            data-bs-target="#logoutUserModal"
+            ref={logoutBtnRef}
+          >
+            <i className="fa-solid fa-power-off" onClick={handleLogout}></i>
+          </button>
+        </div>
         <nav className="navbar-nav flex-column mt-5">
           <NavLink
             className={`nav-link ps-3 ${
@@ -81,7 +107,7 @@ const Sidebar = () => {
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasSidebarLabel">
-            PicBloom
+            PixBloom
           </h5>
           <button
             type="button"
@@ -135,6 +161,7 @@ const Sidebar = () => {
           </nav>
         </div>
       </div>
+      <LogoutUserModal logoutBtnRef={logoutBtnRef} />
     </>
   );
 };

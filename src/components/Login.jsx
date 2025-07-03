@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/login.css";
+import { backendUrl } from "../utils/fetchApi";
 
 const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [loading, setLoading] = useState(false);
-  const backendUrl = "https://pix-bloom-be.vercel.app";
 
   const handleGoogleOAuth = () => {
     try {
