@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "./Sidebar";
 import "../css/main.css";
+import { backendUrl } from "../utils/fetchApi";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -12,10 +13,9 @@ const Profile = () => {
     const fetchGoogleProfile = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(
-          "https://pix-bloom-be.vercel.app/v2/user/profile",
-          { withCredentials: true }
-        );
+        const response = await axios.get(`${backendUrl}/v2/user/profile`, {
+          withCredentials: true,
+        });
 
         if (response.status === 200) {
           setUser(response.data);
